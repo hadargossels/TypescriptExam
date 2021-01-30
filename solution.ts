@@ -16,3 +16,7 @@ console.log("yes")}
 }
 
 setArray()
+
+for (let element of myArray){
+    createItem(element)
+}
