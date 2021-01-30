@@ -72,3 +72,17 @@ const delAll = (array:any) :void => {
     localStorage.setItem('myArray', JSON.stringify(array))   
 }
 
+const delCom = (array:any) :void => {   
+    array = JSON.parse(localStorage.getItem('myArray'))
+    for (let element of array) {
+        if (element.done == "yes") {
+            let index = array.indexOf(element)
+            array.splice(index,1)
+        }
+    }
+    localStorage.setItem('myArray', JSON.stringify(array)) 
+    let removeLater = document.querySelectorAll('.removeLater')
+    for (let i:number = 0; i<removeLater.length; i++) {
+        document.querySelectorAll('.removeLater')[i].remove()
+    }
+}
