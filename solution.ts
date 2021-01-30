@@ -51,3 +51,17 @@ function createItem(n):void {
 const clear = ():void => {
     (<HTMLInputElement>document.querySelector('#todo-item')).value = "";
   }
+
+  const cross = (item:any,array:any):void => {
+    let sibling:any = item.previousSibling;
+    sibling.classList.add('done');
+    let parent:any = item.parentElement;
+    parent.classList.add('removeLater')
+    array = JSON.parse(localStorage.getItem('myArray'))
+    for (let element of array) {
+        if (element.headLine == sibling.innerText) {
+            element.done = "yes"
+        }
+    }
+    localStorage.setItem('myArray', JSON.stringify(array))
+}
