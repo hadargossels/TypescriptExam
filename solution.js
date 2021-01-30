@@ -63,7 +63,10 @@ var cross = function (item, array) {
 };
 var delAll = function (array) {
     array = [];
-    document.querySelector('#todo-list').remove();
+    var row = document.querySelectorAll('.todo-row');
+    for (var i = 0; i < row.length; i++) {
+        document.querySelectorAll('.todo-row')[i].remove();
+    }
     localStorage.setItem('myArray', JSON.stringify(array));
 };
 var delCom = function (array) {
