@@ -5,3 +5,5 @@ class TASK {
         this.done = "no"
     } 
 }
+
+let myArray:any;
