@@ -95,3 +95,8 @@ document.querySelector('#todo-delall').addEventListener('click', () => {
       return
     }
 })
+
+
+document.querySelector('#todo-delcom').addEventListener('click', () => {
+    delCom(myArray)
+})
