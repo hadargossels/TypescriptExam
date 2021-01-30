@@ -86,3 +86,12 @@ const delCom = (array:any) :void => {
         document.querySelectorAll('.removeLater')[i].remove()
     }
 }
+
+document.querySelector('#todo-delall').addEventListener('click', () => {
+    let answer:any = confirm("Are you sure?");
+    if (answer == true) {
+        delAll(myArray)
+    } else {
+      return
+    }
+})
