@@ -63,6 +63,7 @@ var cross = function (item, array) {
 };
 var delAll = function (array) {
     array = [];
+    array = [];
     var row = document.querySelectorAll('.todo-row');
     for (var i = 0; i < row.length; i++) {
         document.querySelectorAll('.todo-row')[i].remove();
