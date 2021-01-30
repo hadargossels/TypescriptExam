@@ -7,3 +7,12 @@ class TASK {
 }
 
 let myArray:any;
+
+const setArray = (): void => {
+    if (localStorage.length > 0) 
+    {myArray = JSON.parse(localStorage.getItem('myArray'));
+console.log("yes")}
+    else myArray = []; 
+}
+
+setArray()
