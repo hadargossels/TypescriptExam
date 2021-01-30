@@ -65,3 +65,10 @@ const clear = ():void => {
     }
     localStorage.setItem('myArray', JSON.stringify(array))
 }
+
+const delAll = (array:any) :void => {
+    array = [];
+    document.querySelector('#todo-list').remove();
+    localStorage.setItem('myArray', JSON.stringify(array))   
+}
+
