@@ -68,7 +68,11 @@ const clear = ():void => {
 
 const delAll = (array:any) :void => {
     array = [];
-    document.querySelector('#todo-list').remove();
+    array = [];
+    let row:NodeListOf<Element> = document.querySelectorAll('.todo-row');
+    for (let i:number = 0; i < row.length; i++) {
+        document.querySelectorAll('.todo-row')[i].remove();
+    }
     localStorage.setItem('myArray', JSON.stringify(array))   
 }
 
