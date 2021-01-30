@@ -47,3 +47,7 @@ function createItem(n):void {
     row.appendChild(btn);
     document.querySelector('#todo-list').appendChild(row)
 }
+
+const clear = ():void => {
+    (<HTMLInputElement>document.querySelector('#todo-item')).value = "";
+  }
