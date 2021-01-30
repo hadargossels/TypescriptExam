@@ -32,3 +32,18 @@ document.querySelector('#todo-add').addEventListener('submit', (e) => {
     createItem(newTask);
     clear();
 })
+
+function createItem(n):void {
+    let row = (<HTMLInputElement>document.createElement('div'))
+    let item = (<HTMLInputElement>document.createElement('div'))
+    let btn = (<HTMLInputElement>document.createElement('button'))
+    row.classList.add('todo-row')
+    item.classList.add('todo-item')
+    btn.classList.add('todo-ok')
+    btn.setAttribute('onclick','cross(this,myArray)')
+    btn.innerText = "V"
+    item.innerText = n.headLine 
+    row.appendChild(item);   
+    row.appendChild(btn);
+    document.querySelector('#todo-list').appendChild(row)
+}
